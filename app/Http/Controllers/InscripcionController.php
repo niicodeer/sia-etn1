@@ -13,9 +13,4 @@ class InscripcionController extends Controller
 
         return response()->file($archivo);
     }
-    /* public function index()
-    {
-        $step = 1;
-        return view('formulario.inscripcion-form', compact('step'));
-    } */
 }
