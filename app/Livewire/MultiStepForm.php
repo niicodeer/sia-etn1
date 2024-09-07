@@ -61,6 +61,17 @@ class MultiStepForm extends Component
     public $terminos;
     public $derechoImagen;
 
+    public function updatedReconocimientos()
+    {
+        if (in_array('ninguno', $this->reconocimientos)) {
+            $this->reconocimientos = ['ninguno'];
+        }
+
+        if (in_array('ninguno', $this->reconocimientos) && in_array(['familiar', 'merito', 'otros'], $this->reconocimientos)) {
+            $this->reconocimientos = array_diff($this->reconocimientos, ['ninguno']);
+        }
+    }
+
     public function updatedCurso()
     {
         $elijeModalidad = !($this->curso == 'Tercer año' || $this->curso == 'Cuarto año' || $this->curso == 'Quinto año' || $this->curso == 'Sexto año');

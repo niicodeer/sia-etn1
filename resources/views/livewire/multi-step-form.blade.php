@@ -233,12 +233,12 @@
                     siguientes opciones:</p>
                 <div class="w-full flex flex-col gap-y-2">
                     <x-input-check id="familiar" label="Tengo un familiar que es alumno escuela" value="familiar"
-                        wire:model="reconocimientos" />
+                        wire:model.live="reconocimientos" />
                     <x-input-check id="merito" label="Reconocimiento al mérito" value="merito"
-                        wire:model="reconocimientos" />
+                        wire:model.live="reconocimientos" />
                     <x-input-check id="otros" label="Otros reconocimientos (concursos, mejor compañero,  etc)"
-                        value="otros" wire:model="reconocimientos" />
-                    <x-input-check id="ninguno" label="Ninguno" value="ninguno" wire:model="reconocimientos" />
+                        value="otros" wire:model.live="reconocimientos" />
+                    <x-input-check id="ninguno" label="Ninguno" value="ninguno" wire:model.live="reconocimientos" />
                 </div>
                 @error('reconocimientos')
                     <p class="text-red-700 text-sm">{{ $message }}</p>
